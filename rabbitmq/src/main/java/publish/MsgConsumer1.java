@@ -10,6 +10,7 @@ import java.util.concurrent.TimeoutException;
 /**
  * 短信服务消费者
  * @author Administrator
+ *  比工作队列模式多了绑定交换机的过程
  */
 public class MsgConsumer1 {
     public static void main(String[] args) throws IOException, TimeoutException {

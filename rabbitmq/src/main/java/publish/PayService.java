@@ -11,6 +11,8 @@ import java.util.concurrent.TimeoutException;
 
 /**
  * 支付消息生产者
+ * 发布订阅模式
+
  */
 public class PayService {
     public static void main(String[] args) throws IOException, TimeoutException {

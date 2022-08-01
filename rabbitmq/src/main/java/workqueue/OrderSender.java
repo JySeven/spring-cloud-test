@@ -8,6 +8,10 @@ import config.RabbitUtils;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
+/**
+ * 工作队列模式
+ * 无需指定交换机
+ */
 public class OrderSender {
     public static void main(String[] args) throws IOException, TimeoutException {
         // 建立TCP连接
