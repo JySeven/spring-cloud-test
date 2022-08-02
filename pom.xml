@@ -13,6 +13,7 @@
     <module>python-service</module>
     <module>common</module>
     <module>rabbitmq</module>
+      <module>producer-rabbitmq</module>
   </modules>
   <dependencyManagement>
     <dependencies>
