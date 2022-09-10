@@ -11,7 +11,7 @@ public class Consumer1 {
         // 建立TCP连接
         Connection connection= RabbitUtils.getConnection();
         // 创建通道
-        Channel channel = connection.createChannel();
+        final Channel channel = connection.createChannel();
         //.queueDeclare(queue, durable, exclusive, autoDelete, arguments);
         // 创建一个队列 如果队列存在则使用这个队列
         // 1.队列名称
