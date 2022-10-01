@@ -17,6 +17,7 @@
       <module>consumer-rabbitmq</module>
     <module>TestCollection</module>
     <module>TestNetty</module>
+      <module>TestAll</module>
   </modules>
   <dependencyManagement>
     <dependencies>
