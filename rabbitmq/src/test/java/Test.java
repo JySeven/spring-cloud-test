@@ -6,10 +6,11 @@ public class Test {
 //        System.out.println("GC完成");
 //        System.out.println(weakReference.get());
         System.loadLibrary("synchronizer");
-        
+
 
     }
-    static class A{
+
+    static class A {
         private int age;
 
         public int getAge() {

@@ -2,8 +2,8 @@ public class Test {
 
     public static void main(String[] args) {
 
-        int[] arr = {1,3,7,2,4,9,10,5,6,8};
-        Test test=new Test();
+        int[] arr = {1, 3, 7, 2, 4, 9, 10, 5, 6, 8};
+        Test test = new Test();
         test.maopao(arr);
         //推导大O阶方法：
         //1、用常数1取代运行时间中的所有加法常数。
@@ -18,16 +18,16 @@ public class Test {
     // =N^2/2+N/2
     // 去最高项数 去掉其他项数 因为最高项数是2 所以可以去掉/2不影响的敞亮
     // =>O(n^2)
-    public void maopao(int[] arr){
+    public void maopao(int[] arr) {
         int temp;
-        int i = arr.length-1;
-        while (i>=0){
-            for (int j=0;j<i;j++){
-                if (arr[j]>arr[j+1]){
+        int i = arr.length - 1;
+        while (i >= 0) {
+            for (int j = 0; j < i; j++) {
+                if (arr[j] > arr[j + 1]) {
                     // 交换 从小到大排序
-                    temp=arr[j+1];
-                    arr[j+1]=arr[j];
-                    arr[j]=temp;
+                    temp = arr[j + 1];
+                    arr[j + 1] = arr[j];
+                    arr[j] = temp;
                 }
             }
             i--;

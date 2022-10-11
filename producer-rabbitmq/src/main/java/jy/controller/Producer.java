@@ -16,7 +16,7 @@ public class Producer {
     RabbitTemplate rabbitTemplate;
 
     @GetMapping("/pub1")
-    public void pub1(){
+    public void pub1() {
 
     }
 }

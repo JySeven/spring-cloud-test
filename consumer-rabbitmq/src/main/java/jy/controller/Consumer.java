@@ -1,11 +1,8 @@
 package jy.controller;
 
-import org.apache.dubbo.config.annotation.DubboService;
+import org.springframework.web.bind.annotation.RestController;
 
-
+@RestController
 public class Consumer {
-    public static void main(String[] args) {
-
-    }
 
 }

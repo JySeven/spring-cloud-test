@@ -18,6 +18,7 @@
     <module>TestCollection</module>
     <module>TestNetty</module>
       <module>TestAll</module>
+    <module>provider-dubbo</module>
   </modules>
   <dependencyManagement>
     <dependencies>

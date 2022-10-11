@@ -9,22 +9,22 @@ import java.util.concurrent.TimeoutException;
 
 public class QuzhouMsgTopic {
     public static void main(String[] args) throws IOException, TimeoutException {
-        Connection connection= RabbitUtils.getConnection();
+        Connection connection = RabbitUtils.getConnection();
         Channel channel = connection.createChannel();
         // 1.声明队列
-        channel.queueDeclare(RabbitmqConstant.QUEUE_QUZHOU,false,false,false,null);
+        channel.queueDeclare(RabbitmqConstant.QUEUE_QUZHOU, false, false, false, null);
         // 2.绑定队列与交换机并且指定routingkey
-        channel.queueBind(RabbitmqConstant.QUEUE_QUZHOU,RabbitmqConstant.EXCHANGE_TOPIC_WEATHER,"quzhou.#");
+        channel.queueBind(RabbitmqConstant.QUEUE_QUZHOU, RabbitmqConstant.EXCHANGE_TOPIC_WEATHER, "quzhou.#");
         // 每次消费消息的数量
         channel.basicQos(1);
-        channel.basicConsume(RabbitmqConstant.QUEUE_QUZHOU,new DefaultConsumer(channel){
+        channel.basicConsume(RabbitmqConstant.QUEUE_QUZHOU, new DefaultConsumer(channel) {
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
-                String message=new String(body);
-                System.out.println("衢州:"+message);
-                System.out.println("衢州的TagId"+envelope.getDeliveryTag());
+                String message = new String(body);
+                System.out.println("衢州:" + message);
+                System.out.println("衢州的TagId" + envelope.getDeliveryTag());
                 // false代表只签收当前消息 true代表签收该消费者所有未签收的消息
-                channel.basicAck(envelope.getDeliveryTag(),false);
+                channel.basicAck(envelope.getDeliveryTag(), false);
             }
         });
     }
