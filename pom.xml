@@ -11,14 +11,15 @@
   <description>个人练习spring-cloud项目</description>
   <modules>
     <module>python-service</module>
-    <module>common</module>
+    <module>common-jy</module>
     <module>rabbitmq</module>
-      <module>producer-rabbitmq</module>
-      <module>consumer-rabbitmq</module>
+    <module>producer-rabbitmq</module>
+    <module>consumer-rabbitmq</module>
     <module>TestCollection</module>
     <module>TestNetty</module>
       <module>TestAll</module>
     <module>provider-dubbo</module>
+    <module>payment-service</module>
   </modules>
   <dependencyManagement>
     <dependencies>
@@ -28,12 +29,7 @@
         <artifactId>spring-boot-starter</artifactId>
         <version>${spring-boot-version}</version>
       </dependency>
-      <!--mysql-->
-      <dependency>
-        <groupId>mysql</groupId>
-        <artifactId>mysql-connector-java</artifactId>
-        <version>${mysql-version}</version>
-      </dependency>
+
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-amqp</artifactId>
@@ -42,6 +38,8 @@
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-web</artifactId>
+        <version>${spring-boot-version}</version>
+        <!--        <scope>compile</scope>-->
         <version>RELEASE</version>
 <!--        <scope>compile</scope>-->
       </dependency>

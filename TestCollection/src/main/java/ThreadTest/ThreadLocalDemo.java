@@ -2,7 +2,7 @@ package ThreadTest;
 
 public class ThreadLocalDemo {
 
-    static ThreadLocal<String> threadLocal = new ThreadLocal<>();
+    static ThreadLocal<String> threadLocal = new ThreadLocal<String>();
 
     public static void main(String[] args) throws InterruptedException {
 
