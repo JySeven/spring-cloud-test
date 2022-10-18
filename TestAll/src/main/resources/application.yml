@@ -8,11 +8,15 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 server:
-  port: 9099
+  port: 9078
   servlet:
-    context-path: /payment
+    context-path: /testAll
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    cache-enabled: true
+  mapper-locations: classpath:/mapper/*.xml
 
-mybatis-plus:
-  global-config:
-    db-config:
-      id-type: auto
+
+
+

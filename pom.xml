@@ -17,8 +17,7 @@
     <module>consumer-rabbitmq</module>
     <module>TestCollection</module>
     <module>TestNetty</module>
-      <module>TestAll</module>
-    <module>provider-dubbo</module>
+    <module>TestAll</module>
     <module>payment-service</module>
   </modules>
   <dependencyManagement>
@@ -40,8 +39,8 @@
         <artifactId>spring-boot-starter-web</artifactId>
         <version>${spring-boot-version}</version>
         <!--        <scope>compile</scope>-->
-        <version>RELEASE</version>
-<!--        <scope>compile</scope>-->
+        <!--        <version>RELEASE</version>-->
+        <!--        <scope>compile</scope>-->
       </dependency>
 
       <dependency>
@@ -64,6 +63,18 @@
     <spring-boot-version>2.2.2.RELEASE</spring-boot-version>
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
-  </properties>
 
+  </properties>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>8</source>
+          <target>8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

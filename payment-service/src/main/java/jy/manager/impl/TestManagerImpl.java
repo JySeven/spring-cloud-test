@@ -1,5 +1,7 @@
 package jy.manager.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import java.util.Random;
 import jy.manager.TestManager;
 import jy.mapper.UserMapper;
 import jy.pojo.User;
@@ -15,7 +17,9 @@ public class TestManagerImpl implements TestManager {
     @Override
     public void test() {
         User user = new User();
-        user.setAge(String.valueOf(Math.random()));
+        user.setAge(String.valueOf(new Random().nextInt(100)));
         userMapper.insert(user);
+        QueryWrapper<User> queryWrapper = new QueryWrapper<User>();
+        userMapper.selectList(queryWrapper);
     }
 }
