@@ -10,7 +10,7 @@ import org.apache.dubbo.rpc.RpcContext;
 @DubboService(version = "first", protocol = "dubbo")
 public class DubboTestServiceImpl implements DubboTestService {
 
-    @DubboReference(version = "second")
+    @DubboReference(version = "second",loadbalance = "1")
     private DubboTestService dubboTestService;
 
     @Override
