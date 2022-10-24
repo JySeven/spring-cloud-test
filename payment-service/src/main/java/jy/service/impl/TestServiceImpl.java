@@ -18,4 +18,11 @@ public class TestServiceImpl implements TestService {
     public void test() {
         testManager.test();
     }
+
+    @Override
+    public void test2() {
+        System.out.println("输出了test2");
+    }
+
+
 }
